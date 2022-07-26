@@ -1,6 +1,5 @@
 # list of insults
-insults = ["shit", "Shit", "Fuck off", "fuck off", "fuck", "Fuck", "fck", "Fck", "Fck off", "fck off", "sht", "Sht", "Twat", "twat", "fuck yourself", "Fuck yourself", "Fck yourself", "fck yourself", "screw you", "Screw you", "Asshole", "asshole", "bullshit", "Bullshit", "bitch", "Bitch", "btch", "Btch", "stfu", "Stfu", "STFU", "StFu", "s.t.f.u", "S.T.F.U", "S.T.F.U.", "s.t.f.u.", "Stfu.", "stfu.", "motherfucker", "Motherfucker", "motherFucker", "mother fucker", "Mother fucker", "Mother Fucker", "Fucker", "son of bitch", "Son of bitch", "son of Bitch", "ur mom", "Ur mom", "Ur Mom", "ur Mom", "ur mum", "Ur mum", "Your mom", "your mom", "Idiot", "idiot", "dumbass", "Dumbass", "dumb ass", "Dumb ass", "Jerk", "jerk", "piss off", "Piss off", "cock sucker", "Cock", "Cock sucker", "dick head", "dickhead", "Dickhead", "Dick Head", "Dick", "Pennis", "dick", "pennis", "whore", "Whore", "pussy", "Pussy", "P*ussy", "Prick", "prick", "White Trash", "white trash", "kiss my ass", "Kiss my ass", "moron", "Moron", "cock", "Cock", "Holy Shit", "holy shit", "Holy shit", "God Damn it", "God damn it", "god Damn it", "god damn it", "piece of trash", "Pieve of trash", "bastard", "Bastard", "gives a fuck", "Gives a fuck", "Freaking idiot", "freaking idiot", "ass", "Ass", "f*ck", "F*ck"]
-
+insults = ["insult1", "insult2"]
 
 @bot.event
 async def on_message(msg):
@@ -28,7 +27,8 @@ async def on_message(msg):
                 await evr.delete()
             else: 
                 pass
-              
+
+# command to toggle the anti insult system
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def anti_insult(ctx):
