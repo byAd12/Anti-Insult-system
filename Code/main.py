@@ -41,7 +41,7 @@ async def anti_insult(ctx):
         antilink[str(ctx.guild.id)] = "on"
         with open("anti-insult-system.json", "w") as f:
             json.dump(antilink, f, indent=4) # Writing the changes to JSON
-        embed1 = nextcord.Embed(description="Anti insult system has been enabled, when someone beefs the bot will delete and warn the user.", color=0xf1c40f)
+        embed1 = discord.Embed(description="Anti insult system has been enabled, when someone beefs the bot will delete and warn the user.", color=0xf1c40f)
         await ctx.send(embed=embed1)
 
 
@@ -55,7 +55,7 @@ async def anti_insult(ctx):
         with open("anti-insult-system.json", "w") as f: # Opening the JSON file but with write mode so we can dump the changes
             json.dump(antilink, f, indent=4) # Dumping the changes
 
-        embed2 = nextcord.Embed(description="Anti insult system has been enabled, when someone beefs the bot will delete and warn the user.", color=0xf1c40f)
+        embed2 = discord.Embed(description="Anti insult system has been enabled, when someone beefs the bot will delete and warn the user.", color=0xf1c40f)
         await ctx.send(embed=embed2)
         
     else:
@@ -68,5 +68,7 @@ async def anti_insult(ctx):
         
         with open("anti-insult-system.json", "w") as f: # Opening the JSON file but with write mode so we can dump the changes
             json.dump(antilink, f, indent=4) # Dumping the changes
-        embed3 = nextcord.Embed(description="Anti insult system has been Disabled.", color=0xf1c40f)
+        embed3 = discord.Embed(description="Anti insult system has been Disabled.", color=0xf1c40f)
         await ctx.send(embed=embed3)
+
+bot.run("token")
